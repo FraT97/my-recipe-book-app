@@ -1,0 +1,14 @@
+.sidebar {
+    width: 200px; 
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar a:hover {
+    background-color: #fb844c;
+}
