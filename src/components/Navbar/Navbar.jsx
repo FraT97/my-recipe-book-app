@@ -1,4 +1,4 @@
-import Logo from '../../assets/images/app-logo.png'
+import Logo from '../../assets/images/third-logo.png'
 import './Navbar.css'
 
 function Navbar() {

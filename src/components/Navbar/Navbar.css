@@ -1,6 +1,13 @@
 .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+    height: 14em;
+    margin-left: 20rem;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar h1 {
+    color: #000000;
 }
