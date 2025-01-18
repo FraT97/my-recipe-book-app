@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function ListItem({ recipe, onDelete }) {
@@ -9,8 +10,8 @@ function ListItem({ recipe, onDelete }) {
       <p>Servings: {recipe.servings}</p>
 
       
-
-      {}
+      <Link to={`/recipes/${recipe.id}`} className="view-details-link">View Details</Link>
+      
       {recipe.calories < 180  ? <p>✅ Healthy Choice</p> : <p>❌ Consider an Alternative</p>}
       {recipe.calories > 300 ? <p>High in Calories</p> : <p>Lower in Calories</p>}
 
