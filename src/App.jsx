@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import List from './components/List/List';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
@@ -8,6 +8,7 @@ import About from './components/pages/About';
 import Dashboard from './components/pages/Dashboard';
 import ItemDetails from './components/pages/ItemDetails';
 import NotFound from './components/pages/NotFound';
+import AddItemForm from './components/AddItem/AddItemForm';
 import './App.css';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
 
   return (
 
-    <BrowserRouter>
+   
       <div className="recipe-book-app">
        
         <Navbar />
@@ -28,11 +29,12 @@ function App() {
           <Route path="/recipes/:id" element={<ItemDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/AddRecipe" element={<AddItemForm />} />
         </Routes>
         <Footer />
 
       </div>
-    </BrowserRouter>
+    
   );
 }
 

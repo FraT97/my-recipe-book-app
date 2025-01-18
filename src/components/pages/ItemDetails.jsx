@@ -1,6 +1,8 @@
-// ItemDetails.jsx
+
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';  
+
+
 function ItemDetails() {
   const { id } = useParams();  
   const [recipe, setRecipe] = useState(null);

@@ -1,9 +1,10 @@
 
-
+import { Link } from 'react-router-dom';
 
 function About() {
   return (
     <div className="about-page">
+    <Link to={`/About`}></Link>
       <h1>About This Project</h1>
       <p>
         Welcome to our Recipe Book app! This application helps users manage and explore different recipes. Users can view a list of recipes, see details for each recipe, and get information such as calories, servings, and healthy recommendations.
