@@ -1,32 +1,39 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-function AddItemForm({ addRecipe }) {
-  const [name, setName] = useState('');
-  const [image, setImage] = useState('');
-  const [calories, setCalories] = useState('');
-  const [servings, setServings] = useState('');
 
+import axios from "axios";
+const API_URL = "recipes.json";
+function AddItemForm() {
+    const [name, setName] = useState('');
+    const [image, setImage] = useState('');
+    const [calories, setCalories] = useState('');
+    const [servings, setServings] = useState('');
   
-
-  const handleSubmit = (e) => {
+    const handleSubmit = (e) => {        
     e.preventDefault();
-    
-    const newRecipe = {
-      id: Date.now().toString(), 
-      name,
-      image,
-      calories: parseInt(calories),
-      servings: parseInt(servings),
+    const newRecipe = { 
+        name, 
+        image, 
+        calories: Number(calories), 
+        servings: Number(servings) 
+      };
+  
+      axios
+        .post(`${API_URL}`, newRecipe)
+        .then(() => {
+          alert("Recipe added !");
+          setName('');
+          setImage('');
+          setCalories('');
+          setServings('');
+        })
+        .catch((error) => {
+          console.error("Error adding recipe:", error);
+          alert("Failed to add recipe.Try again.");
+        });
     };
-    addRecipe(newRecipe);
-   
-    setName('');
-    setImage('');
-    setCalories('');
-    setServings('');
-  };
-
+  
   return (
 
      
