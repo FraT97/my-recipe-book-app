@@ -1,9 +1,10 @@
 .recipe-item img {
-    max-width: 20%;
+    max-width: 100%;
     
 
 }
 
 .recipe-item {
     list-style: none;
+    gap: 20px;
 }

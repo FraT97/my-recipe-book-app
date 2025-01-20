@@ -1,8 +1,10 @@
 
 import { Link } from 'react-router-dom';
+import './About.css'
 
 function About() {
   return (
+    
     <div className="about-page">
     <Link to={`/About`}></Link>
       <h1>About This Project</h1>
@@ -17,10 +19,10 @@ function About() {
           IronHack Student
         </p>
         <div className="social-links">
-          <a href="https://github.com/Fra-T97" >
+          <a href="https://github.com/FraT97" >
             GitHub
           </a>
-          <a href="https://www.linkedin.com/in/Francesco-Torchia/" >
+          <a href="https://www.linkedin.com/in/francesco-torchia-wd" >
             LinkedIn
           </a>
         </div>
@@ -32,7 +34,7 @@ function About() {
           IronHack Student
         </p>
         <div className="social-links">
-          <a href="https://github.com/Vic-Marchesi" >
+          <a href="https://github.com/vicmarchesi" >
             GitHub
           </a>
           <a href="https://www.linkedin.com/in/Victor-Marchesi/">

@@ -4,9 +4,10 @@ import './Sidebar.css';
 function Sidebar() {
   return (
     <aside className="sidebar">
+      <Link to="/home">Home</Link>
+      <Link to="/addrecipe">Add Recipe</Link>
+      <Link to="/about">About</Link>
       
-      <Link to="/about">About</Link> 
-      <Link to="/AddItem">Add Item</Link> 
     </aside>
   );
 }
