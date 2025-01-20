@@ -1,14 +1,14 @@
 
 .sidebar {
   width: 200px; 
-  height: 100vh; /* Make the sidebar full-height */
-  position: fixed; /* Fix the sidebar to the left */
+  height: 100vh; 
+  position: fixed; 
   top: 0;
   left: 0;
-  background-color: #f4f4f4; /* Light background for sidebar */
-  padding-top: 20px; /* Space from the top */
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
-  z-index: 1000; /* Make sure the sidebar is above the content */
+  background-color: #f4f4f4; 
+  padding-top: 20px; 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+  z-index: 1000; 
 }
 
 
@@ -18,24 +18,19 @@
   text-decoration: none;
   color: #333;
   font-size: 16px;
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  transition: background-color 0.3s ease; 
 }
 
-/* Sidebar link hover effect */
+
 .sidebar a:hover {
-  background-color: #47d8f8; /* Change background color on hover */
-  color: white; /* Change text color when hovered */
-  border-radius: 5px; /* Optional: add rounded corners on hover */
+  background-color: #47d8f8; 
+  color: white; 
+  border-radius: 5px; 
 }
 
-/* Highlight the active link */
+
 .sidebar a.active {
-  background-color: #fb844c; /* Same hover color for active link */
-  color: rgb(240, 242, 242); /* Ensure the text is white for active link */
-  font-weight: bold; /* Optional: make the active link bold */
-}
-
-/* Optional: Add some padding to the container to avoid overlap with content */
-.sidebar a:first-child {
-  margin-top: 20px; /* Add space between the top of the sidebar and the first link */
+  background-color: #fb844c; 
+  color: rgb(240, 242, 242); 
+  font-weight: bold; 
 }
