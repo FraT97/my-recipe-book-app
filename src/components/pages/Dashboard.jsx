@@ -1,26 +1,27 @@
-
-
 import { useState, useEffect } from 'react';
 import ListItem from '../List/ListItem';
-
 
 function Dashboard() {
   const [recipes, setRecipes] = useState([]);
 
-
-
   useEffect(() => {
-    fetch('recipes.json')
+    fetch('http://localhost:5000/recipes')
       .then((response) => response.json())
-      .then((data) => setRecipes(data));
+      .then((data) => {
+        console.log('Fetched recipes:', data);
+        setRecipes(data);
+      })
+      .catch((error) => console.error('Error fetching recipes:', error));
   }, []);
 
   const handleDelete = (id) => {
-    setRecipes(recipes.filter(recipe => recipe.id !== id));
+    fetch(`http://localhost:5000/recipes/${id}`, {
+      method: 'DELETE', 
+    })
+      .then(() => setRecipes(recipes.filter((recipe) => recipe.id !== id)));
   };
 
-
- return (
+  return (
     <div className="dashboard">
       <h1>Dashboard</h1>
       <h2>Recipe List</h2>
