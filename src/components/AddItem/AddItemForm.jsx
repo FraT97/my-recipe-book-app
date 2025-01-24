@@ -5,7 +5,8 @@ import  "./AddItemForm.css"
 
 
 
-const API_URL = "recipes.json";
+const API_URL = "http://localhost:5000/recipes";
+
 
 
 function AddItemForm() {
