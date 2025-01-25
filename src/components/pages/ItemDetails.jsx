@@ -22,8 +22,6 @@ function ItemDetails() {
       <img src={recipe.image} alt={recipe.name} />
       <p><strong>Calories:</strong> {recipe.calories}</p>
       <p><strong>Servings:</strong> {recipe.servings}</p>
-      <p><strong>Ingredients:</strong> {recipe.ingredients}</p>
-      <p><strong>Instructions:</strong> {recipe.instructions}</p>
       <p>{recipe.calories < 180 ? '✅ Healthy Choice' : '❌ Consider an Alternative'}</p>
     </div>
   );
