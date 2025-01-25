@@ -5,6 +5,7 @@ function ListItem({ recipe, onDelete }) {
   return (
     <li className="recipe-item">
       <img src={recipe.image} alt={recipe.name} />
+      <div className="recipe-details">
       <h3>{recipe.name}</h3>
       <p>Calories: {recipe.calories}</p>
       <p>Servings: {recipe.servings}</p>
@@ -16,6 +17,7 @@ function ListItem({ recipe, onDelete }) {
       {recipe.calories > 300 ? <p>High in Calories</p> : <p>Lower in Calories</p>}
 
       <button onClick={() => onDelete(recipe.id)}>Delete</button>
+      </div>
     </li>
   );
 }
